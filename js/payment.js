@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('pay-amount').textContent   = fmt(price);
   document.getElementById('pay-subtotal').textContent = fmt(price);
 
+  // Điền thông tin chuyển khoản thủ công
+  document.getElementById('copy-amount').textContent     = fmt(price);
+  document.getElementById('copy-amount-raw').value       = String(price);
+  if (bookingId) document.getElementById('copy-content').textContent = bookingId;
+
   // Tạo QR thật từ SePay VietQR
   if (bookingId && price > 0) {
     const qrUrl = `https://qr.sepay.vn/img?bank=${BANK_CODE}&acc=${BANK_ACCOUNT}&template=compact&amount=${price}&des=${bookingId}`;
@@ -78,4 +83,16 @@ function startPolling(bookingId) {
 
 function fmt(n) {
   return Number(n).toLocaleString('vi-VN') + 'đ';
+}
+
+function copyText(text, btn) {
+  navigator.clipboard.writeText(text).then(() => {
+    const orig = btn.textContent;
+    btn.textContent = 'Đã copy';
+    btn.classList.add('bg-green-100', 'text-green-700');
+    setTimeout(() => {
+      btn.textContent = orig;
+      btn.classList.remove('bg-green-100', 'text-green-700');
+    }, 1500);
+  });
 }

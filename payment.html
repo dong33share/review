@@ -150,6 +150,56 @@
       </p>
     </div>
 
+    <!-- Bank transfer info -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+      <h2 class="text-sm font-bold text-gray-900 mb-3">Hoặc chuyển khoản thủ công</h2>
+      <div class="space-y-3">
+        <!-- Ngân hàng -->
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-gray-400 w-28 flex-shrink-0">Ngân hàng</span>
+          <span class="text-sm font-semibold text-gray-800">ACB</span>
+          <div class="w-16"></div>
+        </div>
+        <!-- Chủ tài khoản -->
+        <div class="flex items-center justify-between">
+          <span class="text-xs text-gray-400 w-28 flex-shrink-0">Chủ tài khoản</span>
+          <span class="text-sm font-semibold text-gray-800">Nguyễn Lê Đông</span>
+          <div class="w-16"></div>
+        </div>
+        <!-- Divider -->
+        <div class="border-t border-gray-100"></div>
+        <!-- Số tài khoản -->
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-xs text-gray-400 w-28 flex-shrink-0">Số tài khoản</span>
+          <span class="text-sm font-semibold text-gray-800 flex-1">118996909</span>
+          <button onclick="copyText('118996909', this)"
+            class="text-xs font-semibold text-primary border border-primary/30 bg-green-50 rounded-lg px-3 py-1.5 flex-shrink-0 active:scale-95 transition-transform">
+            Copy
+          </button>
+        </div>
+        <!-- Số tiền -->
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-xs text-gray-400 w-28 flex-shrink-0">Số tiền</span>
+          <span id="copy-amount" class="text-sm font-semibold text-gray-800 flex-1">—</span>
+          <button onclick="copyText(document.getElementById('copy-amount-raw').value, this)"
+            class="text-xs font-semibold text-primary border border-primary/30 bg-green-50 rounded-lg px-3 py-1.5 flex-shrink-0 active:scale-95 transition-transform">
+            Copy
+          </button>
+        </div>
+        <input type="hidden" id="copy-amount-raw" value="" />
+        <!-- Nội dung CK -->
+        <div class="flex items-center justify-between gap-2">
+          <span class="text-xs text-gray-400 w-28 flex-shrink-0">Nội dung CK</span>
+          <span id="copy-content" class="text-sm font-semibold text-orange flex-1 break-all">—</span>
+          <button onclick="copyText(document.getElementById('copy-content').textContent, this)"
+            class="text-xs font-semibold text-primary border border-primary/30 bg-green-50 rounded-lg px-3 py-1.5 flex-shrink-0 active:scale-95 transition-transform">
+            Copy
+          </button>
+        </div>
+      </div>
+      <p class="text-xs text-gray-400 mt-4 text-center">Nhập đúng nội dung để hệ thống tự xác nhận</p>
+    </div>
+
     <!-- Countdown -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 flex items-center gap-4">
       <div class="w-12 h-12 bg-orange/10 rounded-xl flex items-center justify-center flex-shrink-0">

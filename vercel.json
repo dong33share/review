@@ -1,0 +1,14 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/payment",
+      "dest": "/payment.html"
+    },
+    {
+      "src": "/success",
+      "dest": "/success.html"
+    }
+  ]
+}

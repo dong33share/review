@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặt Lịch Thành Công | Trạm Bảo Hiểm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
+  <style>
+    html, body { width: 100%; }
+    body { background: #f3f4f6; }
+    .page-wrapper { max-width: 480px; margin: 0 auto; min-height: 100vh; box-shadow: 0 4px 40px rgba(0,0,0,0.12); }
+    @media (min-width: 768px) {
+      body { background: #e2e8f0; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+      .page-wrapper { min-height: 0; margin: 2rem 0; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 60px rgba(0,0,0,0.18); width: 100%; }
+    }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#16A34A',
+            'primary-light': '#22C55E',
+            orange: { DEFAULT: '#F97316', hover: '#EA580C' },
+            messenger: '#0084FF'
+          },
+          fontFamily: { sans: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans">
+<div class="page-wrapper bg-gray-50">
+
+  <!-- ── HEADER ── -->
+  <div class="bg-white px-5 pt-8 pb-6 border-b border-gray-100">
+    <div class="flex items-start justify-between gap-3">
+      <div class="flex-1">
+        <p class="text-xs font-medium text-gray-500 mb-1">Bước tiếp theo để</p>
+        <h1 class="text-2xl font-black leading-tight text-gray-900 mb-3">
+          Hoàn Tất Đặt Lịch<br/>Rà Soát
+        </h1>
+        <p class="text-sm text-gray-500 leading-relaxed">
+          Để Trạm Bảo Hiểm xác nhận nhanh hơn và tránh bỏ sót lịch hẹn, anh chị vui lòng gửi tin nhắn xác nhận qua Messenger.
+        </p>
+      </div>
+      <!-- Clipboard illustration -->
+      <div class="flex-shrink-0 mt-1 relative">
+        <div class="w-24 h-28 bg-green-50 rounded-3xl flex items-center justify-center border border-green-100">
+          <svg class="w-14 h-14 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+          </svg>
+          <!-- Green check badge -->
+          <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-lg border-2 border-white">
+            <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROGRESS (completed) ── -->
+  <div class="bg-white border-b border-gray-100 px-4 py-4">
+    <div class="flex items-center justify-between max-w-sm mx-auto">
+      <div class="flex flex-col items-center gap-1">
+        <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <span class="text-xs text-green-600 font-medium">Thông tin</span>
+      </div>
+      <div class="flex-1 h-0.5 bg-green-400 mx-2 mb-4"></div>
+      <div class="flex flex-col items-center gap-1">
+        <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center">
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <span class="text-xs text-green-600 font-medium">Thanh toán</span>
+      </div>
+      <div class="flex-1 h-0.5 bg-green-400 mx-2 mb-4"></div>
+      <div class="flex flex-col items-center gap-1">
+        <div class="w-8 h-8 rounded-full bg-orange flex items-center justify-center ring-4 ring-orange/20">
+          <span class="text-white text-sm font-bold">3</span>
+        </div>
+        <span class="text-xs text-orange font-semibold">Xác nhận</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="px-4 pt-5 pb-10 space-y-4">
+
+    <!-- Step 1 — Copy message -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="bg-gray-50 border-b border-gray-100 px-4 py-3 flex items-center gap-3">
+        <div class="w-7 h-7 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+          <span class="text-white text-xs font-bold">1</span>
+        </div>
+        <h2 class="text-sm font-bold text-gray-900">Sao chép tin nhắn bên dưới</h2>
+        <div class="ml-auto">
+          <button onclick="copyMessage()"
+            class="flex items-center gap-1.5 border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1.5 rounded-lg hover:bg-gray-50 transition-colors active:scale-95">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+            SAO CHÉP
+          </button>
+        </div>
+      </div>
+
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-3">Dán tin nhắn của bạn vào Messenger để gửi đến Trạm Bảo Hiểm để xác nhận lịch</p>
+
+        <!-- Message template -->
+        <div id="message-template" class="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm text-gray-700 leading-relaxed select-all">
+          <p>Chào Trạm Bảo Hiểm,</p>
+          <br/>
+          <p>Tôi vừa đăng ký rà soát hợp đồng BHNT trên website.</p>
+          <br/>
+          <p>Thông tin của tôi:</p>
+          <p>Họ Tên: <strong id="msg-name" class="text-primary">Nguyễn Văn An</strong></p>
+          <p>Số điện thoại: <strong id="msg-phone" class="text-primary">0901 234 567</strong></p>
+          <br/>
+          <p>Mong được xác nhận lịch rà soát. Cảm ơn.</p>
+        </div>
+
+        <!-- Copy success toast -->
+        <div id="copy-toast" class="hidden mt-2 flex items-center gap-2 bg-green-50 border border-green-200 rounded-xl px-3 py-2">
+          <svg class="w-4 h-4 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span class="text-sm text-green-700 font-medium">Đã sao chép tin nhắn!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 — Open Messenger -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="bg-gray-50 border-b border-gray-100 px-4 py-3 flex items-center gap-3">
+        <div class="w-7 h-7 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+          <span class="text-white text-xs font-bold">2</span>
+        </div>
+        <h2 class="text-sm font-bold text-gray-900">Nhấn nút bên dưới để mở Messenger</h2>
+      </div>
+
+      <div class="p-4">
+        <p class="text-xs text-gray-400 mb-4">Nhấn vào nút để mở trang Messenger của Trạm Bảo Hiểm và gửi tin nhắn xác nhận</p>
+
+        <a href="https://m.me/trambaohiemonline" target="_blank" rel="noopener"
+          class="flex items-center justify-center gap-3 w-full bg-messenger hover:bg-blue-600 text-white font-bold py-4 rounded-2xl text-sm tracking-wide transition-all duration-200 active:scale-95 shadow-lg shadow-blue-500/30">
+          <!-- Messenger icon -->
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.91 1.458 5.515 3.75 7.22V22l3.416-1.876c.912.253 1.88.39 2.834.39C17.523 20.514 22 16.37 22 11.243 22 6.145 17.523 2 12 2zm1.242 12.31l-2.424-2.588-4.73 2.588 5.202-5.523 2.484 2.587 4.67-2.587-5.202 5.523z"/>
+          </svg>
+          GỬI TIN NHẮN QUA MESSENGER
+        </a>
+
+        <p class="text-center text-xs text-gray-400 mt-2">m.me/trambaohiemonline</p>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4">
+      <div class="flex items-start gap-3">
+        <div class="w-7 h-7 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-amber-800 mb-1">Lưu ý</p>
+          <p class="text-xs text-amber-700 leading-relaxed">Vui lòng gửi đủ cả tin nhắn đã chép để có thể xác nhận nhanh hơn. Nếu chưa nhận được xác nhận sau 30 phút, anh chị có thể liên hệ theo các kênh bên dưới.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Support -->
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-4">
+      <h3 class="text-sm font-bold text-gray-700 mb-3 flex items-center gap-2">
+        <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+        Cần hỗ trợ?
+      </h3>
+      <p class="text-xs text-gray-500 mb-3">Liên hệ qua các kênh bên dưới</p>
+      <div class="flex items-center gap-3">
+        <!-- Facebook -->
+        <a href="#" class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center hover:bg-blue-700 transition-colors">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <!-- Messenger -->
+        <a href="https://m.me/trambaohiemonline" target="_blank"
+          class="w-10 h-10 bg-messenger rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors">
+          <svg class="w-5 h-5 text-white" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.91 1.458 5.515 3.75 7.22V22l3.416-1.876c.912.253 1.88.39 2.834.39C17.523 20.514 22 16.37 22 11.243 22 6.145 17.523 2 12 2zm1.242 12.31l-2.424-2.588-4.73 2.588 5.202-5.523 2.484 2.587 4.67-2.587-5.202 5.523z"/>
+          </svg>
+        </a>
+        <!-- Phone -->
+        <a href="tel:+84901234567" class="w-10 h-10 bg-green-500 rounded-xl flex items-center justify-center hover:bg-green-600 transition-colors">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+        </a>
+        <!-- Zalo -->
+        <a href="#" class="w-10 h-10 bg-blue-500 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors">
+          <span class="text-white text-xs font-extrabold">Zalo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Security -->
+    <p class="text-center text-xs text-gray-400 flex items-center justify-center gap-1">
+      <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+      </svg>
+      Thông tin của bạn được bảo mật tuyệt đối
+    </p>
+  </div>
+
+  <script src="js/success.js"></script>
+</div>
+</body>
+</html>

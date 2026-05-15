@@ -7,15 +7,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
   <style>
-    html, body { width: 100%; }
     body { background: #f3f4f6; }
-    .page-wrapper { max-width: 480px; margin: 0 auto; min-height: 100vh; box-shadow: 0 4px 40px rgba(0,0,0,0.12); }
-    @media (min-width: 768px) {
-      body { background: #e2e8f0; }
-      .page-wrapper { max-width: 980px; min-height: auto; border-radius: 20px; overflow: hidden; }
-    }
   </style>
   <script>
     tailwind.config = {
@@ -48,7 +42,7 @@
       </div>
 
       <!-- Illustration column -->
-      <div class="flex-shrink-0 w-28 mt-1 md:w-24">
+      <div class="flex-shrink-0 w-28 mt-1 md:w-16 lg:w-24">
         <svg viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto opacity-90">
           <rect x="18" y="18" width="68" height="86" rx="8" fill="#E8F0EB" stroke="#1C3829" stroke-width="2"/>
           <rect x="36" y="10" width="32" height="14" rx="5" fill="#1C3829"/>
@@ -193,21 +187,21 @@
           <div class="h-px bg-gray-100 w-full"></div>
 
           <!-- Row 2: 3 features in a row -->
-          <div class="grid grid-cols-3 gap-2">
-            <div class="flex items-center gap-1.5 text-xs text-gray-600">
-              <svg class="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="grid grid-cols-3 gap-1">
+            <div class="flex flex-col items-center text-center gap-1 text-[11px] leading-snug text-gray-600">
+              <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
               </svg>
               <span>Rà soát 1:1 cùng chuyên gia</span>
             </div>
-            <div class="flex items-center gap-1.5 text-xs text-gray-600">
-              <svg class="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex flex-col items-center text-center gap-1 text-[11px] leading-snug text-gray-600">
+              <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
               <span>Thời lượng 45–60 phút</span>
             </div>
-            <div class="flex items-center gap-1.5 text-xs text-gray-600">
-              <svg class="w-3.5 h-3.5 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex flex-col items-center text-center gap-1 text-[11px] leading-snug text-gray-600">
+              <svg class="w-4 h-4 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
               </svg>
               <span>Bảo mật thông tin tuyệt đối</span>
@@ -233,7 +227,7 @@
 
       <!-- CTA Button — dark green -->
       <button onclick="submitForm()"
-        class="w-full bg-primary hover:bg-primary-light text-white font-bold py-4 rounded-2xl text-sm tracking-widest uppercase transition-all duration-200 active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
+        class="w-full bg-primary hover:bg-primary-light text-white font-bold py-4 rounded-2xl text-sm normal-case tracking-normal lg:uppercase lg:tracking-wide transition-all duration-200 active:scale-95 flex items-center justify-center gap-3 shadow-lg shadow-primary/20">
         Đặt Lịch Rà Soát Hợp Đồng
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>

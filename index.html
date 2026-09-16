@@ -111,20 +111,23 @@
       <!-- Mã hỗ trợ (toggle) -->
       <div class="mb-5">
         <button id="btn-toggle-code" onclick="toggleCodeSection()"
-          class="flex items-center justify-between w-full text-sm hover:opacity-80 transition-opacity py-2 px-3 bg-gray-50 rounded-xl border border-gray-100">
+          class="flex items-center justify-between w-full text-sm hover:opacity-90 transition-all py-2 px-3 bg-emerald-50/70 rounded-xl border border-emerald-200">
           <div class="flex items-center gap-3">
-            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center border border-gray-200 flex-shrink-0">
-              <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center border border-emerald-200 flex-shrink-0 text-primary">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
               </svg>
             </div>
             <div>
-              <p class="text-sm font-semibold text-gray-700 text-left">Có mã hỗ trợ?</p>
-              <p class="text-xs text-gray-400 text-left">Nhập mã nếu bạn có được cung cấp</p>
+              <p class="text-sm font-bold text-gray-900 text-left flex items-center gap-1.5">
+                <span>Có mã hỗ trợ?</span>
+                <span class="bg-primary text-white text-[10px] font-bold px-1.5 py-0.2 rounded">Nhận 0đ</span>
+              </p>
+              <p class="text-xs text-gray-500 text-left">Nhập mã nếu bạn có được cung cấp</p>
             </div>
           </div>
-          <svg id="chevron-code" class="w-4 h-4 text-gray-400 transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg id="chevron-code" class="w-4 h-4 text-primary transition-transform duration-200 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
           </svg>
         </button>

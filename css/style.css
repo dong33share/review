@@ -5,6 +5,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.page-wrapper {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-shadow: 0 4px 40px rgba(0,0,0,0.12);
+}
+
 /* ── Spinner border width ── */
 .border-3 { border-width: 3px; }
 

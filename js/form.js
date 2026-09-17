@@ -3,19 +3,20 @@ const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwCJjhNAsK1HL0E
 let CONFIG      = { BASE_PRICE: 169000 };
 let appliedCode = null;
 
-// ── Init: skeleton → fetch → render giá thật ──
-document.addEventListener('DOMContentLoaded', async () => {
-  const priceEl = document.querySelector('#price-original p');
-  if (priceEl) priceEl.classList.add('price-skeleton');
-
-  try {
-    const res  = await fetch(APPS_SCRIPT_URL);
-    const data = await res.json();
-    if (data.config?.BASE_PRICE) CONFIG = data.config;
-  } catch (_) {}
-
-  if (priceEl) priceEl.classList.remove('price-skeleton');
+// ── Init: Render giá gốc ngay lập tức (0s) → fetch background nếu cần ──
+document.addEventListener('DOMContentLoaded', () => {
   renderBasePrice();
+
+  // Fetch ngầm ở background để không làm chậm trải nghiệm người dùng
+  fetch(APPS_SCRIPT_URL)
+    .then(res => res.json())
+    .then(data => {
+      if (data.config?.BASE_PRICE && data.config.BASE_PRICE !== CONFIG.BASE_PRICE) {
+        CONFIG = data.config;
+        renderBasePrice();
+      }
+    })
+    .catch(() => {});
 });
 
 function renderBasePrice() {
